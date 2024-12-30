@@ -8,7 +8,42 @@
 
 @font-face {
   font-family: "myFont";
-  src: url("/r.woff2") format("woff2");
+  src: url("/fonts/regular.woff2") format("woff2");
   font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "myFont";
+  src: url("/fonts/medium.woff2") format("woff2");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "mazzardH";
+  src: url("/fonts/mazzardH/font-regular.woff2") format("woff2");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "mazzardH";
+  src: url("/fonts/mazzardH/font-medium.woff2") format("woff2");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "mazzardH";
+  src: url("/fonts/mazzardH/font-semibold.woff2") format("woff2");
+  font-weight: 600; /* SemiBold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "mazzardH";
+  src: url("/fonts/mazzardH/font-bold.woff2") format("woff2");
+  font-weight: 700; /* Bold */
   font-style: normal;
 }

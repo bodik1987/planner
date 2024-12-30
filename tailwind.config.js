@@ -6,6 +6,7 @@ export default {
     extend: {
       fontFamily: {
         myFont: ["myFont", "sans-serif"],
+        mazzardH: ["mazzardH", "sans-serif"],
       },
     },
   },
