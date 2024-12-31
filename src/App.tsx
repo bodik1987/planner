@@ -56,7 +56,7 @@ export default function App() {
           TO DO
         </h3>
 
-        <p className="text-3xl font-myFont border-b border-[#DADCDB] pb-2.5 pl-1.5">
+        <div className="text-3xl font-myFont border-b border-[#DADCDB] pb-2.5 pl-1.5">
           <div className="border border-[#B2B2B2] border-dashed w-6 h-6 rounded-full relative">
             <svg
               width="24.428467"
@@ -76,9 +76,9 @@ export default function App() {
               />
             </svg>
           </div>
-        </p>
+        </div>
 
-        <p className="text-3xl font-myFont border-b border-[#DADCDB] pt-2.5 pb-2.5 pl-1.5">
+        <div className="text-3xl font-myFont border-b border-[#DADCDB] pt-2.5 pb-2.5 pl-1.5">
           <div className="border border-[#B2B2B2] border-dashed w-6 h-6 rounded-full relative">
             <svg
               width="26.007812"
@@ -98,11 +98,11 @@ export default function App() {
               />
             </svg>
           </div>
-        </p>
-        <p className="text-3xl font-myFont border-b border-[#DADCDB] pt-2 pb-2 pl-1.5 flex items-center gap-4">
+        </div>
+        <div className="text-3xl font-myFont border-b border-[#DADCDB] pt-2 pb-2 pl-1.5 flex items-center gap-4">
           <div className="border border-[#B2B2B2] border-dashed w-6 h-6 rounded-full relative"></div>
           <span>Купить</span>
-        </p>
+        </div>
       </div>
 
       <div className="mt-8">
@@ -118,6 +118,72 @@ export default function App() {
           />
         </p>
       </div>
+
+      <div className="mt-8">
+        <h3 className="font-medium font-mazzardH tracking-widest border-b border-[#B2B2B2] pb-1 pl-1">
+          PLAN
+        </h3>
+        {Array(2)
+          .fill(undefined)
+          .map((_, index) => (
+            <Hour key={index} hour={index + 4} />
+          ))}
+        <Hour
+          hour={6}
+          node={
+            <input
+              className="ml-2 h-8 pl-4 text-3xl font-myFont text-[#233BAF] outline-none bg-[#DAEFF1] rounded-full"
+              type="text"
+              defaultValue={`Что-то написано`}
+            />
+          }
+        />
+        <Hour
+          hour={7}
+          node={
+            <input
+              className="ml-2 h-8 pl-4 text-3xl font-myFont text-[#233BAF] outline-none bg-[#E8F4D9] rounded-full"
+              type="text"
+              defaultValue={`Что-то написано`}
+            />
+          }
+        />
+        <Hour
+          hour={8}
+          node={
+            <input
+              className="ml-2 h-8 pl-4 text-3xl font-myFont text-[#233BAF] outline-none bg-[#E8E8E8] rounded-full"
+              type="text"
+              defaultValue={`Что-то написано`}
+            />
+          }
+        />
+      </div>
+      {Array(15)
+        .fill(undefined)
+        .map((_, index) => (
+          <Hour key={index} hour={index + 9} />
+        ))}
     </main>
+  );
+}
+
+function Hour({ hour, node }: { hour: number; node?: React.ReactNode }) {
+  return (
+    <div className="flex relative items-center">
+      <div className="font-medium font-mazzardH text-sm border-r border-dashed border-[#DADCDB] w-10 h-10 flex justify-center items-center">
+        {hour}
+      </div>
+
+      {node}
+
+      <div className="absolute bottom-0 pl-10 flex justify-evenly border-b border-[#DADCDB] w-full">
+        <div className="bg-[#B2B2B2] rounded-full w-[3px] h-[3px] translate-y-[2px]" />
+        <div className="bg-[#B2B2B2] rounded-full w-[3px] h-[3px] translate-y-[2px]" />
+        <div className="bg-[#B2B2B2] rounded-full w-[3px] h-[3px] translate-y-[2px]" />
+        <div className="bg-[#B2B2B2] rounded-full w-[3px] h-[3px] translate-y-[2px]" />
+        <div className="bg-[#B2B2B2] rounded-full w-[3px] h-[3px] translate-y-[2px]" />
+      </div>
+    </div>
   );
 }
