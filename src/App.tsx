@@ -47,7 +47,7 @@ export default function App() {
               !expandedDay && "justify-center"
             } max-w-3xl w-full mx-auto h-full py-4 px-8 flex flex-col `}
           >
-            <div className="">
+            <div>
               <div
                 onClick={() => toggleDay(day.id)}
                 className="font-bold font-jet-medium text-[#3A3A3A] text-3xl"
@@ -55,7 +55,11 @@ export default function App() {
                 {day.name}
               </div>
               {expandedDay === day.id && (
-                <div className="mt-2 text-gray-600">{day.content}</div>
+                <div className="mt-2 text-[#6F6F6F] text-lg">
+                  <div>{day.content}</div>
+
+                  <div className="mt-auto">Add new task</div>
+                </div>
               )}
             </div>
           </div>
