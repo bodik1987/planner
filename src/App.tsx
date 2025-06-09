@@ -41,7 +41,6 @@ export default function App() {
           className={`${getDayHeight(
             day.id
           )} border-y border-[#B4B4B4] cursor-pointer`}
-          onClick={() => toggleDay(day.id)}
         >
           <div
             className={`${
@@ -49,7 +48,10 @@ export default function App() {
             } max-w-3xl w-full mx-auto h-full py-4 px-8 flex flex-col `}
           >
             <div className="">
-              <div className="font-bold font-jet-medium text-[#3A3A3A] text-3xl">
+              <div
+                onClick={() => toggleDay(day.id)}
+                className="font-bold font-jet-medium text-[#3A3A3A] text-3xl"
+              >
                 {day.name}
               </div>
               {expandedDay === day.id && (
