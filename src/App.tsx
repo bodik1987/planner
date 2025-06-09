@@ -34,7 +34,7 @@ export default function App() {
   };
 
   return (
-    <main className="h-screen flex flex-col">
+    <main className="h-dvh flex flex-col">
       {daysOfWeek.map((day) => (
         <div
           key={day.id}
