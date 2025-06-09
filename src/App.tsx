@@ -56,7 +56,7 @@ export default function App() {
               </div>
               {expandedDay === day.id && (
                 <div className="mt-2 text-[#6F6F6F] text-lg">
-                  <div>{day.content}</div>
+                  <div className="text-[#EC4520]">{day.content}</div>
 
                   <div className="mt-auto">Add new task</div>
                 </div>
