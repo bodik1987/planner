@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Jet";
+  src: url("./assets/fonts/font-regular.woff2") format("woff2");
+  font-weight: 400 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Jet-Medium";
+  src: url("./assets/fonts/font-medium.woff2") format("woff2");
+  font-weight: 400 600;
+  font-style: normal;
+}
+
+@theme {
+  --font-jet-regular: "Jet", "sans-serif";
+  --font-jet-medium: "Jet-Medium", "sans-serif";
+}
+
+body {
+  @apply bg-[#D5D5D5] font-jet-regular;
+}
